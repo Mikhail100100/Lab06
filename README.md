@@ -25,6 +25,7 @@
 | 20 | Sales | S1: F0/6 | 
 | 30 | Operations | S2: F0/18 | 
 | 999 | Parking_Lot | С1: F0/2-4, F0/7-24, G0/1-2; С2: F0/2-17, F0/19-24, G0/1-2 | 
+| 1000 | Собственная | - |
 ## Задачи
 ### Часть 1. Создание сети и настройка основных параметров устройства
 ### Часть 2. Создание сетей VLAN и назначение портов коммутатора
@@ -38,6 +39,47 @@
 ### Примеры настройки указаны ниже
 
 ![image](https://github.com/user-attachments/assets/ff02f3ff-5f00-4b58-9a06-4f0a69644078)
+
+## Часть 2.
+### Создаем на коммутаторе и называем необходимые нам VLAN, настраиваем интерфейсы управления и шлюхз по умолчанию на коммутаторах 
+### Настраиваем на коммутаторе S1 vlan, прописываем имя и указываем ip адрес и маску как указано в таблице адресации, а также проделываем теже действия для коммутатора S2 согласно адресации
+![image](https://github.com/user-attachments/assets/6c19369a-265c-4f40-b870-629d8c4b825e)
+![image](https://github.com/user-attachments/assets/696959b4-261a-452c-b830-1ba0d306a2d2)
+![image](https://github.com/user-attachments/assets/bf2cb016-0099-4982-a345-f385c237e03d)
+### Назначаем неиспользуемые порты соответствующей VLAN Parking_Lot
+![image](https://github.com/user-attachments/assets/d411bcbd-347f-4376-8e48-db98243110d6)
+### А используемые порты назначаем vlan как указано в таблице и настраиваем транковые порты на коммутаторе S1 
+![image](https://github.com/user-attachments/assets/84c933e8-0ab8-4143-a042-9ba3dd8c4a18)
+### Далее настраиваем то же самое на коммутаторе S2 
+![image](https://github.com/user-attachments/assets/ed881b8e-1cd1-46c8-8d03-818c2780c6b6)
+![image](https://github.com/user-attachments/assets/f3469c4b-75cc-431b-9259-5bbd56da46ee)
+### Мы настроили коммутаторы, создали vlan,имя, магистральные порты согласно нашей таблице адресации и проверяем что получилось командной sh vlan на коммутаторе S1 и S2
+### S1
+![image](https://github.com/user-attachments/assets/eb211ea0-7ebe-49d3-b9e7-9af5c77dd67c)
+### S2
+![image](https://github.com/user-attachments/assets/2e12e934-994a-4193-82e6-40823205d474)
+### Так же проверяем транковые порты на S1 и S2 
+### S1 порт f0/1 "смотрит" на коммутатор S2, а порт f0/5 "смотрит" на маршрутизатор
+![image](https://github.com/user-attachments/assets/3b1508e0-aa0a-4f72-b498-4fccb52b4dd9)
+
+### S2
+![image](https://github.com/user-attachments/assets/fb220611-51dd-4f3e-b6f9-1b7b3dcbc14a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
