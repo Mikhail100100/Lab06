@@ -65,7 +65,7 @@
 ### S2
 ![image](https://github.com/user-attachments/assets/fb220611-51dd-4f3e-b6f9-1b7b3dcbc14a)
 
-
+## Часть 3.
 
 
 
