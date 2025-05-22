@@ -34,13 +34,13 @@
 ### Часть 5. Проверка, что маршрутизация между VLAN работает
 
 ## Решение 
-## Часть 1.
+
 ### Создаем топологию сети и настраиваем базовые параметры для узлов ПК и коммутаторов 
 ### Примеры настройки указаны ниже
 
 ![image](https://github.com/user-attachments/assets/ff02f3ff-5f00-4b58-9a06-4f0a69644078)
 
-## Часть 2.
+
 ### Создаем на коммутаторе и называем необходимые нам VLAN, настраиваем интерфейсы управления и шлюхз по умолчанию на коммутаторах 
 ### Настраиваем на коммутаторе S1 vlan, прописываем имя и указываем ip адрес и маску как указано в таблице адресации, а также проделываем теже действия для коммутатора S2 согласно адресации
 ![image](https://github.com/user-attachments/assets/6c19369a-265c-4f40-b870-629d8c4b825e)
@@ -65,10 +65,29 @@
 ### S2
 ![image](https://github.com/user-attachments/assets/fb220611-51dd-4f3e-b6f9-1b7b3dcbc14a)
 
-## Часть 3.
+### Настраиваем маршрутизатор и его подинтерфейсы как указано в таблице и прописываем значения 
+![image](https://github.com/user-attachments/assets/cc207e68-af3c-4ba9-a704-d740a0c9db5f)
 
 
+![image](https://github.com/user-attachments/assets/f2c47ea8-77a0-43fa-9d8a-9301900fcb9c)
+### Далее настаиваем нативный подинтерфейс на маршрутизаторе не проставляя ему ip адресс 
+![image](https://github.com/user-attachments/assets/9ffc71de-389b-41cf-a5cd-4a011fb8aa87)
+### Продолжение настройки
 
+![image](https://github.com/user-attachments/assets/3cc62048-ced9-48c9-9b88-1052d15c418c)
+### Теперь проверяем наши все настройки по заданию
+### Отправляем эхо-запрос с PC-A на шлюз по умолчанию 
+![image](https://github.com/user-attachments/assets/e341ccca-ba6c-4cb1-9536-c65107f1a4be)
+### После отправляем эхо-запрос с PC-A на PC-B, ip адрес PC-B 192.168.30.3
+
+![image](https://github.com/user-attachments/assets/106847ef-ff73-4c24-ba9c-3478b98e7e02)
+
+### И отправляем запрос с PC-A на коммутатор S2
+![image](https://github.com/user-attachments/assets/f2a8083b-abee-4cff-9992-9219d846a6ee)
+
+### Все прошло успешно, а теперь мы в окне командной строки на PC-B выполним команду tracert на адрес PC-A и увидим следующие результаты 
+![image](https://github.com/user-attachments/assets/3f0132c9-a357-4793-9660-22ad69a31f3d)
+### Дошли до нашего маршрутизатора и от него попали на PC-A
 
 
 
